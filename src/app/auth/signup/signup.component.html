@@ -60,19 +60,34 @@
       <div class="control-row">
         <div class="control">
           <label for="street">Street</label>
-          <input type="text" id="street" name="street" formControlName="street" />
+          <input
+            type="text"
+            id="street"
+            name="street"
+            formControlName="street"
+          />
         </div>
 
         <div class="control">
           <label for="number">Number</label>
-          <input type="text" id="number" name="number" formControlName="number" />
+          <input
+            type="text"
+            id="number"
+            name="number"
+            formControlName="number"
+          />
         </div>
       </div>
 
       <div class="control-row">
         <div class="control">
           <label for="postal-code">Postal Code</label>
-          <input type="text" id="postal-code" name="postal-code" formControlName="postalCode" />
+          <input
+            type="text"
+            id="postal-code"
+            name="postal-code"
+            formControlName="postalCode"
+          />
         </div>
 
         <div class="control">
@@ -149,7 +164,13 @@
   </div>
 
   <p class="form-actions">
-    <button type="reset" class="button button-flat" (click)="onReset()">Reset</button>
+    <button type="reset" class="button button-flat" (click)="onReset()">
+      Reset
+    </button>
     <button type="submit" class="button">Sign up</button>
   </p>
+
+  @if(singUpForm.touched && singUpForm.invalid) {
+  <p class="control-error">Invalid form - please check your input data.</p>
+  }
 </form>
